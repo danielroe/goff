@@ -25,7 +25,6 @@ If you are hitting a GitHub rate limit you can create a token [here](https://git
 npx goff@latest auth --token <GitHub token>
 ```
 
-
 ## 💻 Development
 
 - Clone this repository
