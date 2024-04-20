@@ -8,8 +8,7 @@ runMain({
     version,
   },
   subCommands: {
-    // TODO:
-    // auth: () => import('./commands/auth').then(r => r.auth),
+    auth: () => import('./commands/auth').then(r => r.auth),
     sync: () => import('./commands/sync').then(r => r.sync),
   },
 })

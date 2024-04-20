@@ -1,6 +1,10 @@
+import process from 'node:process'
+
 import type { FetchOptions } from 'ofetch'
 import { $fetch } from 'ofetch'
 import { defu } from 'defu'
+
+import { getToken } from './auth'
 
 interface GitHubIssue {
   title: string
@@ -42,6 +46,15 @@ const $gh = $fetch.create({
     'accept': 'application/vnd.github+json',
     'x-github-api-version': '2022-11-28',
   },
+  onRequest(context) {
+    const token = process.env.GITHUB_TOKEN || getToken()
+    if (token) {
+      if (context.options.headers) {
+        context.options.headers = new Headers(context.options.headers)
+        context.options.headers.set('authorization', `Bearer ${token}`)
+      }
+    }
+  },
 })
 
 async function batchedFetch<T = unknown>(url: string, options?: FetchOptions) {
@@ -73,4 +86,8 @@ export function fetchIssues(repo: string, options?: { closed?: boolean }) {
       state: options?.closed ? 'all' : 'open',
     },
   })
+}
+
+export function fetchUser() {
+  return $gh('https://api.github.com/user')
 }
