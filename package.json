@@ -25,8 +25,7 @@
     "lint": "eslint . --fix",
     "prepare": "simple-git-hooks",
     "prepack": "pnpm build",
-    "prepublishOnly": "pnpm lint && pnpm test",
-    "release": "pnpm test && bumpp && npm publish",
+    "release": "pnpm lint && pnpm test && bumpp && npm publish",
     "test": "pnpm test:unit && pnpm test:types",
     "test:unit": "vitest",
     "test:types": "tsc --noEmit"
