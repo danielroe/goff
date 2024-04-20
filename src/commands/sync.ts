@@ -5,6 +5,8 @@ import { defineCommand } from 'citty'
 import { stringify as toYAML } from 'yaml'
 import { execaCommandSync } from 'execa'
 import consola from 'consola'
+import { colorize } from 'consola/utils'
+import { spinner } from '@clack/prompts'
 
 import { fetchIssueComments, fetchIssues } from '../api'
 
@@ -57,14 +59,20 @@ export const sync = defineCommand({
     await fsp.rm(syncFolder, { recursive: true, force: true })
     await fsp.mkdir(syncFolder, { recursive: true })
 
+    const s = spinner()
+    s.start(`Syncing issues from ${colorize('cyan', repo)}.`)
+
     const issues = await fetchIssues(repo, { closed: args.closed })
+    // .then(issues => issues.filter(issue => !issue.pull_request && !issue.user.login.endsWith('[bot]')))
 
+    if (issues.length === 0) {
+      s.stop('No issues found to sync.')
+      return
+    }
+
+    let count = 0
     for (const issue of issues) {
-      if (issue.pull_request)
-        continue
-      if (issue.user.login.endsWith('[bot]'))
-        continue
-
+      s.message(`${colorize('whiteBright', `[${count++}/${issues.length}]`)} #${issue.number}: ${issue.title}`)
       const metadata: IssueMetadata = {
         author: issue.user.login,
         created: issue.created_at,
@@ -106,6 +114,8 @@ export const sync = defineCommand({
         ...comments.map(comment => `---\n\n## Comment by @${comment.user.login} at ${comment.created_at}\n\n${comment.body}\n\n`),
       ].join('\n'))
     }
+
+    s.stop(`Synced ${issues.length} issues to ${colorize('cyan', syncFolder)}.`)
   },
 })
 

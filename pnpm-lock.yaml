@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@clack/prompts':
+        specifier: ^0.7.0
+        version: 0.7.0
       citty:
         specifier: ^0.1.6
         version: 0.1.6
