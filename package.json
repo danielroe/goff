@@ -1,0 +1,66 @@
+{
+  "name": "goff",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.4",
+  "description": "",
+  "license": "MIT",
+  "repository": "danielroe/goff",
+  "sideEffects": false,
+  "exports": {
+    "./cli": "./dist/cli.js"
+  },
+  "main": "./dist/cli.js",
+  "module": "./dist/cli.js",
+  "types": "./dist/cli.d.ts",
+  "bin": "./bin/goff.js",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "goff": "./bin/goff.js",
+    "build": "unbuild",
+    "dev": "vitest dev",
+    "lint": "eslint . --fix",
+    "prepare": "simple-git-hooks",
+    "prepack": "pnpm build",
+    "prepublishOnly": "pnpm lint && pnpm test",
+    "release": "pnpm test && bumpp && npm publish",
+    "test": "pnpm test:unit && pnpm test:types",
+    "test:unit": "vitest",
+    "test:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "defu": "^6.1.4",
+    "execa": "^8.0.1",
+    "ofetch": "^1.3.4",
+    "yaml": "^2.4.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "latest",
+    "@types/node": "20.12.7",
+    "@vitest/coverage-v8": "latest",
+    "bumpp": "^9.4.0",
+    "eslint": "latest",
+    "lint-staged": "latest",
+    "simple-git-hooks": "latest",
+    "typescript": "latest",
+    "unbuild": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "resolutions": {
+    "goff": "link:."
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,cjs,json,.*rc}": [
+      "pnpm eslint --fix"
+    ]
+  }
+}
