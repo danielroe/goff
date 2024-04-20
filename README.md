@@ -5,23 +5,26 @@
 [![Github Actions][github-actions-src]][github-actions-href]
 [![Codecov][codecov-src]][codecov-href]
 
-> Package description
+> Sync GitHub issues offline into a local folder
+
+🚧 This CLI is heavily in development - and contribution is welcome! But do expect changes in the public API...
 
 ## Usage
 
-Install package:
+Run the sync command within the root of a Git repo. It will create a `.goff` folder and populate it with Markdown files corresponding to the GitHub issues in your repository.
 
 ```sh
-# npm
-npm install goff
+npx goff@latest sync
 
-# pnpm
-pnpm install goff
+# npx goff@latest sync --closed --repo unjs/fontaine
 ```
 
-```js
-import {} from 'goff'
+If you are hitting a GitHub rate limit you can create a token [here](https://github.com/settings/tokens/new) and provide it:
+
+```sh
+npx goff@latest auth --token <GitHub token>
 ```
+
 
 ## 💻 Development
 
@@ -42,7 +45,7 @@ Published under [MIT License](./LICENCE).
 [npm-version-href]: https://npmjs.com/package/goff
 [npm-downloads-src]: https://img.shields.io/npm/dm/goff?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/goff
-[github-actions-src]: https://img.shields.io/github/workflow/status/danielroe/goff/ci/main?style=flat-square
+[github-actions-src]: https://img.shields.io/github/actions/workflow/status/danielroe/goff/ci.yml?branch=main&style=flat-square
 [github-actions-href]: https://github.com/danielroe/goff/actions?query=workflow%3Aci
 [codecov-src]: https://img.shields.io/codecov/c/gh/danielroe/goff/main?style=flat-square
 [codecov-href]: https://codecov.io/gh/danielroe/goff
