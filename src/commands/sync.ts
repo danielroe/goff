@@ -43,7 +43,7 @@ export const sync = defineCommand({
     let repo: string | undefined = args.repo
     if (!repo) {
       try {
-        repo = execaCommandSync(`git remote get-url ${args.remote}`).stdout.match(/github\.com[:/]([^/]+\/[^/]+)/)?.[1]
+        repo = execaCommandSync(`git remote get-url ${args.remote}`).stdout.match(/github\.com[:/]([^/]+\/[^/]+)\.git$/)?.[1]
       }
       catch {}
     }
