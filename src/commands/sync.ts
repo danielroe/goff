@@ -77,7 +77,7 @@ export const sync = defineCommand({
       if (issue.labels.length > 0)
         metadata.labels = issue.labels.map(label => label.name)
 
-      const comments = issue.comments > 0 ? await fetchIssueComments(args.repo, issue.number) : []
+      const comments = issue.comments > 0 ? await fetchIssueComments(repo, issue.number) : []
 
       for (const key in issue.reactions) {
         const reaction = key as keyof typeof issue['reactions']
