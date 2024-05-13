@@ -100,7 +100,7 @@ export const sync = defineCommand({
         filename.push(issue.state)
 
       filename.push(issue.number.toFixed(0).padStart(4, '0'))
-      filename.push(issue.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-{2,}/, '-').replace(/^-|-$/g, ''))
+      filename.push(issue.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-{2,}/, '-').slice(0, 20).replace(/^-|-$/g, ''))
 
       await fsp.writeFile(`${syncFolder}/${filename.join('-')}.md`, [
         '---',
