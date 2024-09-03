@@ -63,7 +63,7 @@ export const sync = defineCommand({
     s.start(`Syncing issues from ${colorize('cyan', repo)}.`)
 
     const issues = await fetchIssues(repo, { closed: args.closed })
-    // .then(issues => issues.filter(issue => !issue.pull_request && !issue.user.login.endsWith('[bot]')))
+      .then(issues => issues.filter(issue => !issue.pull_request && !issue.user.login.endsWith('[bot]')))
 
     if (issues.length === 0) {
       s.stop('No issues found to sync.')
@@ -85,7 +85,7 @@ export const sync = defineCommand({
       if (issue.labels.length > 0)
         metadata.labels = issue.labels.map(label => label.name)
 
-      const comments = issue.comments > 0 ? await fetchIssueComments(repo, issue.number) : []
+      const comments = issue.comments > 0 ? await fetchIssueComments(repo, issue.number).then(issues => issues.filter(issue => !issue.user.login.endsWith('[bot]'))) : []
 
       for (const key in issue.reactions) {
         const reaction = key as keyof typeof issue['reactions']
