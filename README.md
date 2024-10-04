@@ -43,7 +43,7 @@ Published under [MIT License](./LICENCE).
 [npm-version-src]: https://img.shields.io/npm/v/goff?style=flat-square
 [npm-version-href]: https://npmjs.com/package/goff
 [npm-downloads-src]: https://img.shields.io/npm/dm/goff?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/goff
+[npm-downloads-href]: https://npm.chart.dev/goff
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/danielroe/goff/ci.yml?branch=main&style=flat-square
 [github-actions-href]: https://github.com/danielroe/goff/actions?query=workflow%3Aci
 [codecov-src]: https://img.shields.io/codecov/c/gh/danielroe/goff/main?style=flat-square
