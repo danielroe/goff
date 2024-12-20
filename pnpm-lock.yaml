@@ -12,14 +12,14 @@ importers:
   .:
     dependencies:
       '@clack/prompts':
-        specifier: ^0.8.0
-        version: 0.8.2
+        specifier: ^0.9.0
+        version: 0.9.0
       citty:
         specifier: ^0.1.6
         version: 0.1.6
       consola:
         specifier: ^3.2.3
-        version: 3.2.3
+        version: 3.3.0
       defu:
         specifier: ^6.1.4
         version: 6.1.4
@@ -65,7 +65,7 @@ importers:
         version: 3.0.1(typescript@5.7.2)
       vite:
         specifier: latest
-        version: 6.0.3(@types/node@22.10.2)(jiti@2.4.1)(yaml@2.6.1)
+        version: 6.0.4(@types/node@22.10.2)(jiti@2.4.1)(yaml@2.6.1)
       vitest:
         specifier: latest
         version: 2.1.8(@types/node@22.10.2)
@@ -207,8 +207,14 @@ packages:
   '@clack/core@0.3.5':
     resolution: {integrity: sha512-5cfhQNH+1VQ2xLQlmzXMqUoiaH0lRBq9/CLW9lTyMbuKLC3+xEK01tHVvyut++mLOn5urSHmkm6I0Lg9MaJSTQ==}
 
+  '@clack/core@0.4.0':
+    resolution: {integrity: sha512-YJCYBsyJfNDaTbvDUVSJ3SgSuPrcujarRgkJ5NLjexDZKvaOiVVJvAQYx8lIgG0qRT8ff0fPgqyBCVivanIZ+A==}
+
   '@clack/prompts@0.8.2':
     resolution: {integrity: sha512-6b9Ab2UiZwJYA9iMyboYyW9yJvAO9V753ZhS+DHKEjZRKAxPPOb7MXXu84lsPFG+vZt6FRFniZ8rXi+zCIw4yQ==}
+
+  '@clack/prompts@0.9.0':
+    resolution: {integrity: sha512-nGsytiExgUr4FL0pR/LeqxA28nz3E0cW7eLTSh3Iod9TGrbBt8Y7BHbV3mmkNC4G0evdYyQ3ZsbiBkk7ektArA==}
 
   '@es-joy/jsdoccomment@0.48.0':
     resolution: {integrity: sha512-G6QUWIcC+KvSwXNsJyDTHvqUdNoAVJPPgkc3+Uk4WBKqZvoXhlvazOgm9aL0HwihJLQf0l+tOE2UFzXBqCqgDw==}
@@ -1115,8 +1121,8 @@ packages:
   confbox@0.1.8:
     resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
 
-  consola@3.2.3:
-    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+  consola@3.3.0:
+    resolution: {integrity: sha512-kxltocVQCwQNFvw40dlVRYeAkAvtYjMFZYNlOcsF5wExPpGwPxMwgx4IfDJvBRPtBpnQwItd5WkTaR0ZwT/TmQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   convert-source-map@2.0.0:
@@ -1882,6 +1888,9 @@ packages:
 
   magic-string@0.30.15:
     resolution: {integrity: sha512-zXeaYRgZ6ldS1RJJUrMrYgNJ4fdwnyI6tVqoiIhyCyv5IVTK9BU8Ic2l253GGETQHxI4HNUwhJ3fjDhKqEoaAw==}
+
+  magic-string@0.30.17:
+    resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
   magicast@0.3.5:
     resolution: {integrity: sha512-L0WhttDl+2BOsybvEOLK7fW3UA0OQ0IQ2d6Zl2x/a6vVRs3bAY0ECOSHHeL5jD+SbOpOCUEi0y1DgHEn9Qn1AQ==}
@@ -2836,8 +2845,8 @@ packages:
       terser:
         optional: true
 
-  vite@6.0.3:
-    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
+  vite@6.0.4:
+    resolution: {integrity: sha512-zwlH6ar+6o6b4Wp+ydhtIKLrGM/LoqZzcdVmkGAFun0KHTzIzjh+h0kungEx7KJg/PYnC80I4TII9WkjciSR6Q==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -3142,9 +3151,20 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
+  '@clack/core@0.4.0':
+    dependencies:
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
   '@clack/prompts@0.8.2':
     dependencies:
       '@clack/core': 0.3.5
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
+  '@clack/prompts@0.9.0':
+    dependencies:
+      '@clack/core': 0.4.0
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
@@ -3729,7 +3749,7 @@ snapshots:
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
       estree-walker: 2.0.2
-      magic-string: 0.30.15
+      magic-string: 0.30.17
       postcss: 8.4.49
       source-map-js: 1.2.1
 
@@ -3884,7 +3904,7 @@ snapshots:
 
   citty@0.1.6:
     dependencies:
-      consola: 3.2.3
+      consola: 3.3.0
 
   clean-regexp@1.0.0:
     dependencies:
@@ -3927,7 +3947,7 @@ snapshots:
 
   confbox@0.1.8: {}
 
-  consola@3.2.3: {}
+  consola@3.3.0: {}
 
   convert-source-map@2.0.0: {}
 
@@ -4563,7 +4583,7 @@ snapshots:
   giget@1.2.3:
     dependencies:
       citty: 0.1.6
-      consola: 3.2.3
+      consola: 3.3.0
       defu: 6.1.4
       node-fetch-native: 1.6.4
       nypm: 0.3.12
@@ -4812,6 +4832,10 @@ snapshots:
       yallist: 3.1.1
 
   magic-string@0.30.15:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
+  magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -5226,7 +5250,7 @@ snapshots:
   nypm@0.3.12:
     dependencies:
       citty: 0.1.6
-      consola: 3.2.3
+      consola: 3.3.0
       execa: 8.0.1
       pathe: 1.1.2
       pkg-types: 1.2.1
@@ -5821,7 +5845,7 @@ snapshots:
       '@rollup/plugin-replace': 6.0.2(rollup@4.28.1)
       '@rollup/pluginutils': 5.1.4(rollup@4.28.1)
       citty: 0.1.6
-      consola: 3.2.3
+      consola: 3.3.0
       defu: 6.1.4
       esbuild: 0.24.0
       hookable: 5.5.3
@@ -5925,7 +5949,7 @@ snapshots:
       '@types/node': 22.10.2
       fsevents: 2.3.3
 
-  vite@6.0.3(@types/node@22.10.2)(jiti@2.4.1)(yaml@2.6.1):
+  vite@6.0.4(@types/node@22.10.2)(jiti@2.4.1)(yaml@2.6.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
