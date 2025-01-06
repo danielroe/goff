@@ -2,7 +2,7 @@
   "name": "goff",
   "type": "module",
   "version": "0.0.5",
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.3",
   "description": "",
   "license": "MIT",
   "repository": "danielroe/goff",
