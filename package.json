@@ -31,7 +31,7 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@clack/prompts": "^0.10.0",
+    "@clack/prompts": "^0.11.0",
     "citty": "^0.1.6",
     "consola": "^3.2.3",
     "defu": "^6.1.4",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "latest",
-    "@types/node": "22.15.19",
+    "@types/node": "22.15.21",
     "@vitest/coverage-v8": "latest",
     "bumpp": "10.1.1",
     "eslint": "latest",
