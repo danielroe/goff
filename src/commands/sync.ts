@@ -1,12 +1,12 @@
 import fsp from 'node:fs/promises'
 import process from 'node:process'
 
+import { spinner } from '@clack/prompts'
 import { defineCommand } from 'citty'
-import { stringify as toYAML } from 'yaml'
-import { execaCommandSync } from 'execa'
 import consola from 'consola'
 import { colorize } from 'consola/utils'
-import { spinner } from '@clack/prompts'
+import { execaCommandSync } from 'execa'
+import { stringify as toYAML } from 'yaml'
 
 import { fetchIssueComments, fetchIssues } from '../api'
 

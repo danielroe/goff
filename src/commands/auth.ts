@@ -3,8 +3,8 @@ import process from 'node:process'
 import { defineCommand } from 'citty'
 import consola from 'consola'
 
-import { setToken } from '../auth'
 import { fetchUser } from '../api'
+import { setToken } from '../auth'
 
 export const auth = defineCommand({
   meta: {

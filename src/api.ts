@@ -1,8 +1,8 @@
+import type { FetchOptions } from 'ofetch'
 import process from 'node:process'
 
-import type { FetchOptions } from 'ofetch'
-import { $fetch } from 'ofetch'
 import { defu } from 'defu'
+import { $fetch } from 'ofetch'
 
 import { getToken } from './auth'
 

@@ -22,7 +22,7 @@
     "goff": "./bin/goff.js",
     "build": "unbuild",
     "dev": "vitest dev",
-    "lint": "eslint . --fix",
+    "lint": "eslint",
     "prepare": "simple-git-hooks",
     "prepack": "pnpm build",
     "release": "pnpm lint && pnpm test && bumpp && npm publish",
