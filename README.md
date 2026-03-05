@@ -40,9 +40,9 @@ Published under [MIT License](./LICENCE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/goff?style=flat-square
-[npm-version-href]: https://npmjs.com/package/goff
-[npm-downloads-src]: https://img.shields.io/npm/dm/goff?style=flat-square
+[npm-version-src]: https://npmx.dev/api/registry/badge/version/goff
+[npm-version-href]: https://npmx.dev/package/goff
+[npm-downloads-src]: https://npmx.dev/api/registry/badge/downloads/goff
 [npm-downloads-href]: https://npm.chart.dev/goff
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/danielroe/goff/ci.yml?branch=main&style=flat-square
 [github-actions-href]: https://github.com/danielroe/goff/actions?query=workflow%3Aci
