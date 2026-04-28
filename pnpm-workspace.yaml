@@ -2,4 +2,4 @@ packages:
   - playground
 
 overrides:
-  goff: "link:."
+  goff: 'link:.'
