@@ -1,5 +1,9 @@
 packages:
   - playground
 
+allowBuilds:
+  esbuild: false
+  simple-git-hooks: false
+
 overrides:
   goff: 'link:.'
