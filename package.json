@@ -8,23 +8,30 @@
   "repository": "danielroe/goff",
   "sideEffects": false,
   "exports": {
-    "./cli": "./dist/cli.js"
+    ".": "./src/cli.ts",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/cli.js",
-  "module": "./dist/cli.js",
-  "types": "./dist/cli.d.ts",
+  "types": "./dist/cli.d.mts",
   "bin": "./bin/goff.js",
   "files": [
     "bin",
     "dist"
   ],
+  "publishConfig": {
+    "main": "./dist/cli.mjs",
+    "module": "./dist/cli.mjs",
+    "exports": {
+      ".": "./dist/cli.mjs",
+      "./package.json": "./package.json"
+    }
+  },
   "scripts": {
     "goff": "./bin/goff.js",
-    "build": "unbuild",
+    "build": "tsdown",
     "dev": "vitest dev",
     "lint": "eslint",
     "prepare": "simple-git-hooks",
-    "prepack": "pnpm build",
+    "prepack": "tsdown",
     "release": "pnpm lint && pnpm test && bumpp && npm publish",
     "test": "pnpm test:unit && pnpm test:types",
     "test:unit": "vitest",
@@ -48,8 +55,8 @@
     "eslint": "latest",
     "nano-staged": "0.9.0",
     "simple-git-hooks": "latest",
+    "tsdown": "0.22.0",
     "typescript": "latest",
-    "unbuild": "latest",
     "vite": "latest",
     "vitest": "latest"
   },
