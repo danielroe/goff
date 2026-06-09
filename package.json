@@ -32,7 +32,6 @@
     "lint": "eslint",
     "prepare": "simple-git-hooks",
     "prepack": "tsdown",
-    "release": "pnpm lint && pnpm test && bumpp && npm publish",
     "test": "pnpm test:unit && pnpm test:types",
     "test:unit": "vitest",
     "test:types": "tsc --noEmit"
@@ -51,7 +50,6 @@
     "@antfu/eslint-config": "latest",
     "@types/node": "24.13.1",
     "@vitest/coverage-v8": "latest",
-    "bumpp": "10.4.1",
     "eslint": "latest",
     "nano-staged": "1.0.2",
     "simple-git-hooks": "latest",
