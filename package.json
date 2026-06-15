@@ -2,7 +2,7 @@
   "name": "goff",
   "type": "module",
   "version": "0.0.5",
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.6.0",
   "description": "",
   "license": "MIT",
   "repository": "danielroe/goff",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "latest",
-    "@types/node": "24.13.1",
+    "@types/node": "24.13.2",
     "@vitest/coverage-v8": "latest",
     "eslint": "latest",
     "nano-staged": "1.0.2",
