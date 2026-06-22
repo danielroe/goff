@@ -2,7 +2,7 @@
   "name": "goff",
   "type": "module",
   "version": "0.0.5",
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.8.0",
   "description": "",
   "license": "MIT",
   "repository": "danielroe/goff",
@@ -53,7 +53,7 @@
     "eslint": "latest",
     "nano-staged": "1.0.2",
     "simple-git-hooks": "latest",
-    "tsdown": "0.22.2",
+    "tsdown": "0.22.3",
     "typescript": "latest",
     "vite": "latest",
     "vitest": "latest"
