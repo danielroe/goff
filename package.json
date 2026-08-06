@@ -47,16 +47,16 @@
     "yaml": "^2.4.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "latest",
+    "@antfu/eslint-config": "^9.1.0",
     "@types/node": "24.13.2",
-    "@vitest/coverage-v8": "latest",
-    "eslint": "latest",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^10.6.0",
     "nano-staged": "1.0.2",
-    "simple-git-hooks": "latest",
+    "simple-git-hooks": "^2.13.1",
     "tsdown": "0.22.3",
-    "typescript": "latest",
-    "vite": "latest",
-    "vitest": "latest"
+    "typescript": "^6.0.3",
+    "vite": "^8.1.3",
+    "vitest": "^4.1.10"
   },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
