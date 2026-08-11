@@ -43,7 +43,7 @@ importers:
         specifier: 24.13.3
         version: 24.13.3
       '@vitest/coverage-v8':
-        specifier: ^4.1.10
+        specifier: 4.1.10
         version: 4.1.10(vitest@4.1.10)
       eslint:
         specifier: 10.8.0
@@ -64,7 +64,7 @@ importers:
         specifier: 8.2.0
         version: 8.2.0(@types/node@24.13.3)(yaml@2.9.0)
       vitest:
-        specifier: ^4.1.10
+        specifier: 4.1.10
         version: 4.1.10(@types/node@24.13.3)(@vitest/coverage-v8@4.1.10)(vite@8.2.0(@types/node@24.13.3)(yaml@2.9.0))
 
   playground:
