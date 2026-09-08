@@ -6,4 +6,4 @@ allowBuilds:
   simple-git-hooks: false
 
 overrides:
-  goff: 'link:.'
+  goff: 'workspace:*'
